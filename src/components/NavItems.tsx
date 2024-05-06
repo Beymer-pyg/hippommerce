@@ -2,7 +2,7 @@
 
 import { PRODUCT_CATEGORIES } from "@/config";
 import { useState } from "react";
-import { NavItem } from "./ui/NavItem";
+import { NavItem } from "./NavItem";
 
 export const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);

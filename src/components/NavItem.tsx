@@ -1,6 +1,6 @@
 import { PRODUCT_CATEGORIES } from "@/config";
 import React from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -37,6 +37,23 @@ export const NavItem = ({
           />
         </Button>
       </div>
+
+      {isOpen ? (
+        <div
+          className={cn(
+            "absolute inset-x-0 top-full text-sm text-muted-foreground",
+            {
+              "animate-in fade-in-10 slide-in-from-top-5": !isAnyOpen,
+            }
+          )}
+        >
+          <div
+            className="absolute inset-0 top-1/2 bg-white shadow"
+            aria-hidden="true"
+          />
+          hola
+        </div>
+      ) : null}
     </div>
   );
 };
